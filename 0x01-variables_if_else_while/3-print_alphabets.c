@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include stdio.h>
 /**
  *main - Entry point
 
@@ -6,11 +6,16 @@
  */
 int main(void)
 {
-int c
-for (c = 0; c < 26; ++c)
-putchar('a' + c);
-for (c = 0; c < 26; ++c)
-putchar('A' + c);
+char lower_case;
+char upper_case;
+for (lower_case = 'a'; lower_case <= 'z'; lower_case++)
+{
+putchar(lower_case);
+}
+for (upper_case = 'A'; upper_case <= 'Z'; upper_case++)
+{
+putchar(upper_case);
+}
 putchar('\n');
 return (0);
 }
