@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-int digit;
-for (digit = 0; digit < 10; digit++)
+int j;
+for (j = 0; j < 10; j++)
 {
-printf("%digit", digit);
+printf("%j", j);
 }
 printf("\n");
 return (0);
