@@ -4,7 +4,8 @@
  * @str: string
  * Return: returns char
  */
-char *string_toupper(char *)
+
+char *string_toupper(char *str)
 {
 int x;
 for (x = 0; str[x] != '\0'; x++)
