@@ -37,7 +37,7 @@ size = (_strlen(s1) + _strlen(s2) + 1);
 dst = (char *) malloc(size * sizeof(char));
 if (dst == 0)
 {
-#return (NULL);
+return (NULL);
 }
 /*Joins arrays*/
 for (i = 0; *(s1 + i) != '\0'; i++)
