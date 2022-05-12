@@ -8,17 +8,15 @@
  * Description: This is dog struct
  */
 
-struct dog 
+struct dog
 {
 char *name;
 float age;
 char *owner;
 };
-
 typedef struct dog doggo;
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 doggo *new_dog(char *name, float age, char *owner);
 void free_dog(doggo *d);
-
-#endif
+#endif /*DOG_H*/
