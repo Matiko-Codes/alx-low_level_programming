@@ -10,9 +10,6 @@ va_list varlist;
 int sum = 0;
 unsigned int i;
 
-if (n == 0)
-return (0);
-
 va_start(varlist, i);
 for (i = 0; i < n; i++)
 sum += va_arg(varlist, int);
