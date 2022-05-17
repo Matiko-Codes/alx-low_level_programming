@@ -45,7 +45,7 @@ break;
 }
 printf("%s", str);
 break;
-} i++;
+} k++;
 }
 printf("\n"), va_end(list);
 }
