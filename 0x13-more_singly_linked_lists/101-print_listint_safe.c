@@ -6,7 +6,7 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-size_t numb = 1;
+size_t numb = 0;
 long int sep;
 while (head)
 {
