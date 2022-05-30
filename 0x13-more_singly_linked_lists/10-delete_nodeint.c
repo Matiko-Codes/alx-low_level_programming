@@ -6,10 +6,9 @@
  * Return: 1 (Success), or -1 (Fail)
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
-{
-    listint_t *ptr = *head;
-    listint_t *mem = NULL;
-    unsigned int k = 0;
+listint_t *ptr = *head;
+listint_t *mem = NULL;
+unsigned int k = 0;
 if (*head == NULL)
 return (-1);
 if (index == 0)
