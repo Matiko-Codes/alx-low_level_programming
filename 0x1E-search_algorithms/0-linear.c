@@ -1,59 +1,26 @@
-#ifndef SEARCH_ALGOS_H
-#define SEARCH_ALGOS_H
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
+#include "search_algos.h"
 
 /**
- * struct listint_s - singly linked list
- *
- * @n: Integer
- * @index: Index of the node in the list
- * @next: Pointer to the next node
- *
- * Description: singly linked list node structure
- * for Holberton project
+ *linear_search - search algorithm
+ *@array: the array of all element.
+ *@size: the size of the array.
+ *@value: the item.
+ *Return: the item.
  */
-typedef struct listint_s
+
+int linear_search(int *array, size_t size, int value)
 {
-    int n;
-    size_t index;
-    struct listint_s *next;
-} listint_t;
+int i = 0;
 
+if (array == NULL)
+return (-1);
 
-
-/**
- * struct skiplist_s - Singly linked list with an express lane
- *
- * @n: Integer
- * @index: Index of the node in the list
- * @next: Pointer to the next node
- * @express: Pointer to the next node in the express lane
- *
- * Description: singly linked list node structure with an express lane
- * for Holberton project
- */
-typedef struct skiplist_s
+while ((size_t) i < size)
 {
-    int n;
-    size_t index;
-    struct skiplist_s *next;
-    struct skiplist_s *express;
-} skiplist_t;
-
-
-int linear_search(int *array, size_t size, int value);
-int binary_search(int *array, size_t size, int value);
-int _binary_search(int *array, size_t left, size_t right, int value);
-int jump_search(int *array, size_t size, int value);
-int interpolation_search(int *array, size_t size, int value);
-int exponential_search(int *array, size_t size, int value);
-int advanced_binary_recursive(int *array, size_t left, size_t right, int value);
-int advanced_binary(int *array, size_t size, int value);
-listint_t *jump_list(listint_t *list, size_t size, int value);
-skiplist_t *linear_skip(skiplist_t *list, int value);
-
-#endif
+printf("Value checked array[%d] = [%d]\n", i, array[i]);
+if (array[i] == value)
+return (i);
+i++;
+}
+return (-1);
+}
